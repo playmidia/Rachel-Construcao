@@ -1,0 +1,233 @@
+@font-face{
+    font-family: "PT_sans";
+    src: local("PT_Sans-Web-Regular.ttf") url(./font/PT_Sans-Web-Regular.ttf);
+    font-family: "MontSerrat";
+    src: local("Montserrat-Regular.ttf") url(./font/Montserrat-Regular.ttf) format("ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./img/background.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    font-family: "MontSerrat";
+}
+.logo{
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+    height: 50px;
+}
+.contain{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+h1{
+    margin: 0;
+    margin-bottom: 10vh;
+    padding: 0;
+    padding-bottom: 10vh;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 3px solid #83B69B;
+}
+h2{
+    margin:  0;
+    padding: 0 0;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.7rem;
+}
+.social-media{
+    position: relative;
+    display: flex;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 150px;
+    margin: 0 20px;
+    transition: .5s;
+    box-shadow: 0 0 5px white;
+}
+.facebook{
+    height: 60%;
+    object-fit: cover;
+}
+.instagram{
+    height: 65%; 
+    object-fit: cover;
+}
+.line{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    height: 2px;
+}
+.ball{
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    animation: animar 1.5s linear infinite;
+}
+.ball:nth-child(2){
+    animation: animar 1.5s linear infinite;
+    animation-delay: .75s;
+}
+.ball:nth-child(3){
+    animation: animar1 1.5s linear infinite;
+}
+.ball:last-child{
+    animation: animar1 1.5s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes animar{
+    0%{
+        width: 5px;
+        height: 5px;
+        left: 0;
+        opacity: 1;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
+        left: calc(50% - 10px);
+        opacity: 0;
+    }
+}
+@keyframes animar1{
+    0%{
+        width: 5px;
+        height: 5px;
+        right: 0;
+        opacity: 1;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
+        right: calc(50% - 10px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 750px){
+    body{
+        background-image: url(./img/backgroundMobile.png);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        
+    }
+    .logo{
+        position: absolute;
+        top: 2vh;
+        left: calc(50%);
+        transform: translateX(-50%);
+        height: 40px;
+    }
+    h1{
+        margin: 0;
+        margin-bottom: 10vh;
+        padding: 0;
+        padding-bottom: 10vh;
+        color: white;
+        letter-spacing: 2px;
+        font-size: 1.7rem;
+        text-align: center;
+        font-weight: normal;
+        border-bottom: 3px solid #83B69B;
+    }
+    h2{
+        margin:  0;
+        padding: 0 0;
+        color: white;
+        letter-spacing: 2px;
+        text-transform: uppercase;    
+        font-weight: normal;
+        text-align: center;
+        font-size: 1.5rem;
+        width: 80%;
+    }
+    .social-media{
+        position: relative;
+        display: flex;
+        width: 60vw;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5vh;
+        padding-top: 5vh;
+    }
+    .line{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+        height: 2px;
+    }
+    .ball{
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        animation: animar 1.5s linear infinite;
+    }
+    .ball:nth-child(2){
+        animation: animar 1.5s linear infinite;
+        animation-delay: .37.5s;
+    }
+    .ball:nth-child(3){
+        animation: animar1 1.5s linear infinite;
+        animation-delay: .75s;
+    }
+    .ball:last-child{
+        animation: animar1 1.5s linear infinite;
+        animation-delay: 1.125s;
+    }
+    @keyframes animar{
+        0%{
+            width: 5px;
+            height: 5px;
+            opacity: 1;
+        }
+        100%{
+            width: 25px;
+            height: 25px;
+            opacity: 0;
+        }
+    }
+    @keyframes animar1{
+        0%{
+            width: 5px;
+            height: 5px;
+            opacity: 1;
+        }
+        100%{
+            width: 25px;
+            height: 25px;
+            opacity: 0;
+        }
+    }
+}
